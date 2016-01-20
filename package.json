@@ -1,0 +1,25 @@
+{
+  "name": "json-transmogrify",
+  "version": "0.1.0",
+  "description": "Small lib to aid in getting data from transforming data from a json file or url into xml.",
+  "main": "lib/transmogrify.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Lucas Bickel <lucas.bickel@swisscom.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:libgraviton/node-json-transmogrify.git"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "js2xmlparser": "^1.0.0",
+    "jsonpath-object-transform": "^1.0.4",
+    "q": "^1.4.1",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.2.1"
+  }
+}
