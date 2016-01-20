@@ -1,11 +1,19 @@
 language: node_js
 node_js:
-  - "stable"
-  - "4.2"
-  - "4.1"
-  - "4.0"
-  - "0.12"
-  - "0.11"
-  - "0.10"
+- stable
+- '4.2'
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.11'
+- '0.10'
 before_script:
-  - npm install -g gulp
+- npm install -g gulp
+deploy:
+  provider: npm
+  email: hairmare@purplehaze.ch
+  api_key:
+    secure: aV/wIyNvU7KaNhDwggLnds46OyXtz5G1ajzB2Rm6+2C8i7+fXvg+U+5KHeGjjP+om52SORmVaDk1AwQvfvblvsVMtEfpQdSVFNk7e8fH3v3TjNvC6uS/sm6U5mAWi3ctTbQFNthhqDPDPR1MFP82K7JpiXTfLRHDG5lxdgD/tUu7nf6Fg7kD0P4xVZcQCeMxpiu16HOxVShn4aENZwXiW99GYn+LiG9XtsioKoqIaTQa8JUATiI55UVQFRdjwTcO3UF0koLHHM1ZiFqVd6JORZQg7wRu8kLmP82jDEcUUa8zlpfjnUH8VYvAYbqeQDts6z0Y4Cio7UIzd9cQbU+Qzi/zstT+LRVD9Qk7urYR5A1ddBmJwVF03EMnh4MU3+Qq6JKc7Y6gNw3shnXPM7e+lVx9S8JasTbL2+vPQGP0hWRB7fnicP7QTIxpGUYrEZKQLLYH3DgFggSlhJaqZ110BC8AUFryyGomY3X/usjQLp4oCjA2LoOV310l4vWdGyjsg42QJyPRgUAgO0eR2D6bRWgnkJ0uR1SLmOxnC80K+Df8INyYDd/XgK/IUfEVH17FLblyxMJRIedEUT/uuIKspey+tH0x9VHmkJLxt4MB/GGzmqcKVhyfVH5/PIA2znryYpcXRwnsd92jTDRruBZyLzr8+uxT2DY5D63LWFc59EY=
+  on:
+    tags: true
+    repo: libgraviton/node-json-transmogrify
