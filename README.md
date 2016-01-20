@@ -5,13 +5,13 @@ A simple lib for transforming json data into xml using jsonpath-object-transform
 ## Install
 
 ``
-npm install transmogrify --save
+npm install json-transmogrify --save
 ``
 
 ## Usage
 
 ``js
-var transmogrify = require('transmogrify');
+var transmogrify = require('json-transmogrify');
 
 var source = './file.json'; // or URL to file
 
