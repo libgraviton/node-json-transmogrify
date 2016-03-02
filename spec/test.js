@@ -1,4 +1,5 @@
-var fs = require('fs');
+var fs = require('fs'),
+    q = require('q');
 
 describe('transmogrify lib', function() {
   var sut = require('../lib/transmogrify');
@@ -33,4 +34,20 @@ describe('transmogrify lib', function() {
       }
     });
   });
+
+  it('lets postTransform return a promise', function(done) {
+    sut('./spec/fixtures/empty.json', {
+      postTransform: function(data) {
+        var deferred = q.defer();
+        setTimeout(function() {
+          deferred.resolve({value: "test"});
+        }, 1);
+        return deferred.promise;
+      }
+    }).then(function(result) {
+      expect(result).toEqual(fs.readFileSync('./spec/fixtures/test-value.xml') + '');
+      done();
+    });
+  });
+
 });

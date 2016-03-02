@@ -24,7 +24,7 @@ var options = {
   },
   // method to mangle raw results from request or file
   postRequest: function(data) { return data; },
-  // method to mangle results of jsonpath-object-transform
+  // method to mangle results of jsonpath-object-transform, may return a promise or data
   postTransform: function(data) { return data; },
 }
 
