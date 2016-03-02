@@ -1,6 +1,6 @@
 {
   "name": "json-transmogrify",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Small lib to aid in getting data from transforming data from a json file or url into xml.",
   "main": "lib/transmogrify.js",
   "scripts": {
