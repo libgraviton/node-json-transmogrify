@@ -50,4 +50,11 @@ describe('transmogrify lib', function() {
     });
   });
 
+  it('allows passing data as an object and converts it', function(done) {
+    sut({}).then(function(result) {
+      expect(result).toEqual(fs.readFileSync('./spec/fixtures/empty.xml') + '');
+      done();
+    });
+  });
+
 });
