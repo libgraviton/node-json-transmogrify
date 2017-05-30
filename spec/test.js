@@ -57,4 +57,27 @@ describe('transmogrify lib', function() {
     });
   });
 
+  it('pass js2xmlparserOptions properly to js2xmlparser', function(done) {
+    sut('./spec/fixtures/empty.json', {
+      js2xmlparserOptions: {
+        useCDATA: true
+      },
+      postTransform: function(data) {
+        var deferred = q.defer();
+        setTimeout(function() {
+          deferred.resolve(
+            {
+              "number": 123,
+              "text": "Text"
+            }
+          );
+        }, 1);
+        return deferred.promise;
+      }
+    }).then(function(result) {
+      expect(result).toEqual(fs.readFileSync('./spec/fixtures/test-text-sample.xml') + '');
+      done();
+    });
+  });
+
 });

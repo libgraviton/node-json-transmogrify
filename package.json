@@ -1,6 +1,6 @@
 {
   "name": "json-transmogrify",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Small lib to aid in getting data from transforming data from a json file or url into xml.",
   "main": "lib/transmogrify.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git@github.com:libgraviton/node-json-transmogrify.git"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "js2xmlparser": "^1.0.0",
     "jsonpath-object-transform": "^1.0.4",
